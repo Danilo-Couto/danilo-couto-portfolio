@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #333;
+  color: #f7f7f7;
+  padding-left: 1rem;
+  margin: 0.5rem;
+}
+
+svg {
+  width: 2rem; /* Set the desired width */
+  height: 2rem; /* Set the desired height */
+  margin: 0.5rem;
+}
+
+.header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

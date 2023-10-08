@@ -1,0 +1,25 @@
+.stacks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Optional: Adjust horizontal spacing */
+  margin-bottom: 6rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+
+}
+
+.icon-container svg {
+  font-size: 5rem; /* Increase the font size to make all icons bigger */
+  margin: 1rem; /* Add some margin between icons (optional) */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+svg:hover {
+  transform: scale(1.1); /* Enlarge the image by 20% on hover */
+  transform-origin: top; /* Define the point from which the image will expand */
+}
