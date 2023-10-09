@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: #333;
   color: #f7f7f7;
   padding-left: 1rem;
   margin: 0.5rem;
 }
 
-svg {
+.header svg {
   width: 2rem; /* Set the desired width */
   height: 2rem; /* Set the desired height */
   margin: 0.5rem;

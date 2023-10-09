@@ -26,13 +26,3 @@ img:hover {
   height: 100%;
 
 }
-
-.eu-img-legenda{
-  flex: 1; /* Takes 2/3 of the width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  /* background-color: #ff4742; */
-}
