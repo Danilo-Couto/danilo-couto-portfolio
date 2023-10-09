@@ -1,18 +1,15 @@
-import '../styles/intro.css';
+import useTranslation from "@/hooks/use-translation";
 
-
-export const aboutMe = 
+export function AboutMe() {
+  const {t} = useTranslation();
+  
+  return (
     <div >
-        <h2> Web Developer Júnior</h2>
-        <p>
-        Já fui baterista de rock/hardcore/punk/metal, me formei em publicidade pela Cásper Líbero,
-        cheguei a coordenador de mídia em uma grande agência digital em São Paulo, andei pela África, tive um hostel
-        na Praia do Rosa-SC, co-inventei um premiado app de entretenimento adulto, viajei de moto pelas 3 Américas
-        </p>
-
-        <p><b>e hoje sou desenvolvedor web full-stack formado pela Trybe.</b></p>
+        <h2> {t('introTitle')} </h2>
+        <p dangerouslySetInnerHTML={{ __html: t('introDescription') }} />
     </div>
-
+  );
+}
 
 
 // const maisDetalhesSobreMim = Sou um desenvolvedor Full-Stack formado pela Trybe com mais 1500 horas dedicados a conteúdos, desafios e projetos de desenvolvimento web, desenvolvimento Front-End e Back-End, Ciência da Computação, Engenharia de Software, metodologias ágeis e habilidades comportamentais (Soft Skills).

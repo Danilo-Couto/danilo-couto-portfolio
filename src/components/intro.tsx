@@ -1,19 +1,24 @@
 'use client'
 import '../styles/intro.css';
-import { myNetworks } from './myNetworks';
-import { aboutMe } from './sobremim';
+import { MyNetworks } from './my-networks';
+import { AboutMe } from './aboutMe';
+import useTranslation from '@/hooks/use-translation';
 
 export function Intro() {
+
+  const {t} = useTranslation();
+
   return (
     <div className='intro'>  
       <div className='about'>
-        {aboutMe}
-        {myNetworks}
+        <AboutMe />
+        <MyNetworks />
       </div>
-        <div className='enlarge-image' title='Este sou eu no jornal local, após viajar mais de 135 mil kms de moto do Brasil ao Alasca EUA ao Ushuaia Argentina'>
+      <div className='enlarge-image' title={t('introAltText')}>
           <img src="https://avatars.githubusercontent.com/u/88905222?s=400&u=2519bc0d939d3b8f1af413bc8801adf6941e172b&v=4" alt="Eu no Alasca" />
         <h6> </h6>
       </div>
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import '../styles/projects.css'
+import useTranslation from "@/hooks/use-translation";
 
 export function Projects() {
   const [repos, setRepos] = useState([]);
@@ -39,15 +40,17 @@ export function Projects() {
       </li>
     ))
 
+    const {t} = useTranslation();
+
   return (
     <div className="projects" title="Projetos">
-      <h2>Meus Projetos</h2>
-
+      <h2>{t('titleProjets')}</h2>
       <ul>
         {!gitRepo ? <div>Github Repository</div> : gitRepo}
         <>
+        <p></p>
           <a href = "/projetos" >
-              -> ver mais projetos
+            {t('moreProjects')}
           </a>
         </>
       </ul>

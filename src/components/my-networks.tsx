@@ -1,17 +1,17 @@
 import { handleRedirect } from "../utils";
+import useTranslation from "@/hooks/use-translation";
 
-export const myNetworks = 
+export function MyNetworks() {
 
-  <div>
-      {/* <a href="/eu" > saiba + </a> */}
+  const { t } = useTranslation();
+  
+  return (
+    <div >
       <button
         type="button"
-        onClick={() =>
-          handleRedirect('/eu/')
-        }
-      > saiba +
+      >
+        <a href="/eu" > {t('introKnowMeBetter')} </a>
       </button>
-
       <button
         type="button"
         onClick={() =>
@@ -36,5 +36,8 @@ export const myNetworks =
         type="button"
         onClick={() => handleRedirect('https://github.com/Danilo-Couto/')}
       > whatsapp
-      </button>      
+      </button>
     </div>
+
+  );
+}

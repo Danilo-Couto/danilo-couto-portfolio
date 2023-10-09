@@ -24,13 +24,15 @@ import {
   DiJava
 } from 'react-icons/di';
 import '../styles/stacks.css'
+import useTranslation from '@/hooks/use-translation';
 
 function Stacks() {
+
+  const {t} = useTranslation();
+
   return (
-    <div className='stacks' title="Skills/ Conhecimentos/ Stacks/ Tecnologias">
-      <h2>
-        Tecnologias/ Linguagens
-      </h2>
+    <div className='stacks' title="Skills/ Stacks/ Frameworks">
+      <h2> {t('stacks')} </h2>
       <div className="icon-container">
         <FaReact />
         <FaGithub />
