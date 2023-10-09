@@ -7,7 +7,8 @@ export const dict = {
     introAltText: "Este sou eu no jornal local, após viajar mais de 135 mil kms de moto do Brasil ao Alasca EUA ao Ushuaia Argentina",
     stacks: "Tecnologias/ Linguagens",
     titleProjets: "Projetos",
-    moreProjects: "ver mais ->"
+    moreProjects: "ver mais ->",
+    certificates: "Certificados",
   },
 
   en: {
@@ -17,7 +18,8 @@ export const dict = {
     introAltText: "This is me in the local newspaper, after traveling more than 135 thousand km by motorcycle from Brazil to Alaska USA to Ushuaia Argentina",
     stacks: "Stacks/ Frameworks",
     titleProjets: "Projects",
-    moreProjects: "checkou more ->"
+    moreProjects: "checkou more ->",
+    certificates: "Certificates",
   },
 
   es: {
@@ -27,7 +29,7 @@ export const dict = {
     introAltText: "Este soy yo en el periódico local, después de recorrer más de 135 mil km en moto desde Brasil hasta Alaska USA hasta Ushuaia Argentina",
     stacks: "Tecnologias/ Lenguages",    
     titleProjets: "Proyetos",
-    moreProjects: "ver más ->"
-
+    moreProjects: "ver más ->",
+    certificates: "Certificaciones",
   }
 }
