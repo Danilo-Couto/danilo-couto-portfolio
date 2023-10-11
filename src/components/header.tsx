@@ -1,19 +1,18 @@
-
-import "../styles/header.css"
-import { AiFillBulb, AiFillStepBackward } from "react-icons/ai";
+import "../styles/header.css";
+import { AiFillBulb, AiFillStepBackward, AiOutlineBulb, AiTwotoneBulb } from "react-icons/ai";
 import { BR, ES, US } from "country-flag-icons/react/1x1";
 import { useLaguageContext } from "@/context/language-context";
-import { useThemeModeContext } from "@/context/thememode-context";
+import { useThemeContext } from "@/context/theme_context";
 
 export function Header() {
 
   const { changeLocale } = useLaguageContext();
-  const { toogleThemeMode } = useThemeModeContext();
-  
+  const { theme, toogleTheme } = useThemeContext();
+
   return (
-    <div className="header">
+    <div className={"header"}>
       <AiFillStepBackward />
-      <h2> Danilo Couto</h2>
+      <h3>Danilo Couto</h3>
       <div>
         <BR onClick ={() => {changeLocale('pt')}}>
         </BR>
@@ -21,7 +20,9 @@ export function Header() {
         </US>
         <ES  onClick ={() => {changeLocale('es')}}>
         </ES>
-        <AiFillBulb onClick ={() => {toogleThemeMode()}}/>
+        {theme === 'light' 
+          ? <AiFillBulb onClick ={() => {toogleTheme()}}/> 
+          :  <AiOutlineBulb onClick ={() => {toogleTheme()}}/> } 
       </div>
     </div>
   );

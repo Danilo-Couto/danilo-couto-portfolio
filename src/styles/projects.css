@@ -1,9 +1,8 @@
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 8px -4px;
-  margin: 2rem;
+.projects{
+    max-width: 96%;
 }
 
+.projects a {
+    color: #ff4742;
+  }
+  

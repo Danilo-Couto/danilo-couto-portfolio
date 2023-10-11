@@ -3,20 +3,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #f7f7f7;
-  padding-left: 1rem;
-  margin: 0.5rem;
 }
 
 .header svg {
-  width: 2rem; /* Set the desired width */
-  height: 2rem; /* Set the desired height */
+  width: 2rem;
+  height: 2rem;
   margin: 0.5rem;
 }
 
-.header div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.light .header{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.dark .header{
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
 }

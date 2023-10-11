@@ -5,7 +5,7 @@ export function Certificates() {
   const {t} = useTranslation();
   
   return (
-    <div className="certificates">
+    <div className="div_box_right" title="">
       <h2>{t('certificates')}</h2>
     </div>
   );

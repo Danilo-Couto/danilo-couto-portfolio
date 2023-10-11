@@ -1,3 +1,4 @@
+import '../styles/stacks.css'
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaGithub, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -23,7 +24,6 @@ import {
   DiGoogleAnalytics,
   DiJava
 } from 'react-icons/di';
-import '../styles/stacks.css'
 import useTranslation from '@/hooks/use-translation';
 
 function Stacks() {
@@ -31,7 +31,7 @@ function Stacks() {
   const {t} = useTranslation();
 
   return (
-    <div className='stacks' title="Skills/ Stacks/ Frameworks">
+    <div className='div_box_right' title="Skills/ Stacks/ Frameworks">
       <h2> {t('stacks')} </h2>
       <div className="icon-container">
         <FaReact />

@@ -1,10 +1,6 @@
 .footer {
   display: flex;
   justify-content: center;
-  background-color: #333;
-  color: #f7f7f7;
-  padding-left: 1rem;
-  margin: 0.5rem;
 }
 
 .footer svg {
@@ -12,3 +8,12 @@
   margin: 1rem; /* Add some margin between icons (optional) */
 }
 
+.light .footer{
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.dark .footer{
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}

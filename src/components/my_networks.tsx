@@ -6,7 +6,7 @@ export function MyNetworks() {
   const { t } = useTranslation();
   
   return (
-    <div >
+    <div className="buttons_intro">
       <button
         type="button"
       >
