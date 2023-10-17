@@ -7,6 +7,7 @@ export function Certificates() {
   return (
     <div className="div_box_right" title="">
       <h2>{t('certificates')}</h2>
+      <p>em breve</p>
     </div>
   );
 }

@@ -2,8 +2,10 @@
 
 import { Intro } from "@/components/intro";
 import Stacks from "@/components/stacks";
-import { Certificates, Header, Projects } from "@/components";
 import { Footer } from '@/components/footer';
+import { Header } from "@/components/header";
+import { Projects } from "@/components/projects";
+import { Certificates } from "@/components/certificates";
 
 export default function Home() {
 
@@ -16,5 +18,5 @@ export default function Home() {
       <Certificates/>
       <Footer />
     </main>
-  )
+  );
 }
