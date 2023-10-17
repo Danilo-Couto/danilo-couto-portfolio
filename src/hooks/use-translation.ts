@@ -1,5 +1,5 @@
 import { useLaguageContext } from '@/context/language-context';
-import { dict } from '@/locales/dicionario';
+import { dict } from '@/libs/dicionario';
 
 export default function useTranslation() {
     
