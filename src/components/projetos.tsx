@@ -4,7 +4,7 @@ import useTranslation from '@/hooks/use-translation';
 import { useDataContext } from '@/context/data_context';
 import Image from 'next/image';
 
-export function Projects() {
+export function Projetos() {
   const { t } = useTranslation();
   const { repo } = useDataContext();
 
@@ -22,7 +22,6 @@ export function Projects() {
         <Image
         src="/images/backend_code.png"
         alt="backend Image"
-        // layout="responsive"
         width={200}
         height={100}
       />
