@@ -20,7 +20,7 @@ export function Header() {
   return (
     <div className={"header"}>
       <AiFillStepBackward onClick={() => goBack() }/>
-      <Link href='/'>
+      <Link className="link" href='/'>
         <h3>Danilo Couto</h3>
       </Link>
       <div>

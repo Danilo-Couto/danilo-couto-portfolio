@@ -21,12 +21,12 @@
   color: var(--text-color-light);
 }
 
-.light a{
+.light .link{
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
 }
 
-.dark a{
+.dark .link{
   background-color: var(--background-color-light);
   color: var(--text-color-light);
 }
