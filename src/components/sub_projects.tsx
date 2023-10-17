@@ -33,9 +33,9 @@ export function SubProjects() {
 
   return (
     <div className='sub-projects'>
-      <h3>{t('titleProjets')}</h3>
+      <h3>{`${repo.length} ${t('titleProjets')}`}</h3>
       {filteredRepo.length === 0 ? (
-        <div>No GitHub Repository</div>
+        <div>GitHub Repository</div>
       ) : (
         <ul>
           {filteredRepo.map((r) => (
