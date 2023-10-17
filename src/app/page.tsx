@@ -4,8 +4,8 @@ import { Intro } from "@/components/intro";
 import Stacks from "@/components/stacks";
 import { Footer } from '@/components/footer';
 import { Header } from "@/components/header";
-import { Projects } from "@/components/projects";
-import { Certificates } from "@/components/certificates";
+import { Projetos } from "@/components/projetos";
+import { Certificados } from "@/components/certificados";
 
 export default function Home() {
 
@@ -14,8 +14,8 @@ export default function Home() {
       <Header/>
       <Intro/>
       <Stacks/>
-      <Projects/>
-      <Certificates/>
+      <Projetos/>
+      <Certificados/>
       <Footer />
     </main>
   );
