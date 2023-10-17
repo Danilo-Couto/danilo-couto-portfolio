@@ -19,7 +19,7 @@
   transition: 0.2s all ease ;
 }
 
-/* Reset some default browser styles */
+/* Reset some default browser styles */imag
 html, body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -60,6 +60,7 @@ a {
 }
 
 /* Provide interactive elements with a cursor */
+svg,
 label,
 button,
 select,
@@ -147,11 +148,12 @@ h2 {
 }
 
 .div_box_left {
+  max-width: 96%;
   box-shadow: -8px -4px;
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .div_box_right {

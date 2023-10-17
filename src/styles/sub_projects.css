@@ -1,16 +1,13 @@
-.projects{
+.sub-projects {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items:center;    
 }
 
-.projects a {
-    color: #ff4742;
-  }
-  
 ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 li {
@@ -19,8 +16,12 @@ li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 1rem;
     padding: 1rem;
+    width: 30%;
     display: flex;
     flex-direction: column;   
-    align-items: center;
     text-align: center;
+}
+
+li a {
+    color: #ff4742;
 }
