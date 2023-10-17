@@ -1,0 +1,48 @@
+import '../styles/sub_projects.css';
+import React from 'react';
+import { useDataContext } from '@/context/data_context';
+import useTranslation from '@/hooks/use-translation';
+import Image from 'next/image';
+
+function ProjectItem({ repo }) {
+  return (
+    <li key={repo.id}>
+      <a href={repo.html_url} 
+        target="_blank" 
+        rel="noopener noreferrer">
+        <h4>{repo.name.toUpperCase().split('-').join(' ')}</h4>
+      </a>
+      <h5>{repo.language}</h5>
+      <Image
+        src="/images/backend_code.png"
+        alt="backend Image"
+        layout="responsive"
+        width={500}
+        height={300}
+      />
+      <p>{repo.description}</p>
+    </li>
+  );
+}
+
+export function SubProjects() {
+  const { t } = useTranslation();
+  const { repo } = useDataContext();
+
+  const filteredRepo = repo.filter((r) => !r.fork);
+
+  return (
+    <div className='sub-projects'>
+      <h3>{t('titleProjets')}</h3>
+      {filteredRepo.length === 0 ? (
+        <div>No GitHub Repository</div>
+      ) : (
+        <ul>
+          {filteredRepo.map((r) => (
+            <ProjectItem key={r.id} repo={r} />
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
