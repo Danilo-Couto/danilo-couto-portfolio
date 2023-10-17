@@ -11,7 +11,7 @@ export function Header() {
   const { changeLocale } = useLaguageContext();
   const { theme, toogleTheme } = useThemeContext();
 
-  const router = useRouter(); // Call useRouter directly
+  const router = useRouter();
 
    const goBack = () => { 
     router.back();
