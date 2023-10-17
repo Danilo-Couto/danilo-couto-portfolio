@@ -1,5 +1,3 @@
-import { aboutMe } from "@/utils/sobremim";
-
 export function MySelf() {
   return (
     <div>
@@ -12,8 +10,8 @@ export function MySelf() {
       </h6>
 
       <button type="button">
-            <a href="/eu"> + sobre mim </a>
-          </button>
+        <a href="/eu"> + sobre mim </a>
+      </button>
 
     </div>
   );

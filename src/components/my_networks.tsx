@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { handleRedirect } from "../utils";
 import useTranslation from "@/hooks/use-translation";
 
@@ -10,7 +11,7 @@ export function MyNetworks() {
       <button
         type="button"
       >
-        <a href="/eu" > {t('introKnowMeBetter')} </a>
+        <Link href={'/eu'}>{t('introKnowMeBetter')}</Link>
       </button>
       <button
         type="button"

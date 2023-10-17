@@ -34,29 +34,27 @@ function Stacks() {
     <div className='div_box_right' title="Skills/ Stacks/ Frameworks">
       <h2> {t('stacks')} </h2>
       <div className="icon-container">
+        <IoLogoJavascript />
+        <DiNodejs />
         <FaReact />
-        <FaGithub />
-        <SiLinux /> 
-        <SiGithub /> 
+        <SiNextdotjs />
         <AiFillHtml5 />
         <FaCss3Alt />
-        <IoLogoJavascript />
-        <FaReact />
-        <SiRedux /> 
-        <SiStyledcomponents />
-        <SiJest />
-        <SiMocha />
-        <DiNodejs />
-        <SiSequelize /> 
-        <SiPrisma /> 
         <SiTypescript />
+        <SiPython />
+        <DiJava />
         <SiMysql />
         <SiMongodb />
         <DiDocker />
         <DiHeroku />
-        <SiNextdotjs />
-        <SiPython />
-        <DiJava />
+        <SiStyledcomponents />
+        <SiJest />
+        <SiMocha />
+        <FaGithub />
+        <SiLinux /> 
+        <SiGithub /> 
+        <SiSequelize /> 
+        <SiPrisma /> 
         <DiGoogleAnalytics />      
       </div>
     </div>
