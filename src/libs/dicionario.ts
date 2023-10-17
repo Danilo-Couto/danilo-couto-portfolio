@@ -7,18 +7,18 @@ export const dict = {
     introAltText: "Este sou eu no jornal local, após viajar mais de 135 mil kms de moto do Brasil ao Alasca EUA ao Ushuaia Argentina",
     stacks: "Tecnologias/ Linguagens",
     titleProjets: "Projetos",
-    moreProjects: "ver mais ->",
+    more: "ver mais ->",
     certificates: "Certificados",
   },
 
   en: {
     introTitle: "Junior Web Developer",
-    introDescription: "I'm very proud of my story. Before being a <strong>Web Developer graduated from Trybe</strong> with more than 60 completed projects, I did a few things. I was a <strong>hardcore/punk/metal drummer< /strong>, I graduated in advertising from <strong>Cásper Líbero</strong>, a career that I followed until I became <strong>area coordinator</strong> of a large agency, I walked <strong>through South Africa </strong>, I had a <strong> hostel in Praia do Rosa-SC</strong>, I co-created an <strong>award-winning adult entertainment app</strong>, I took a <strong>motorcycle trip to Alaska and Ushuaia</strong>, I opened a <strong>guesthouse in Pipa RN</strong>, I became a surfer and I wasn't afraid to make another <strong>career transition</strong>.",
+    introDescription: "I'm very proud of my story. Before being a <strong> Web Developer graduated from Trybe</strong> with more than 60 completed projects, I did a few things. I was a <strong>hardcore/punk/metal drummer </strong>, I graduated in advertising from <strong>Cásper Líbero</strong>, a career that I followed until I became <strong>area coordinator</strong> of a large agency, I walked <strong>through South Africa </strong>, I had a <strong> hostel in Praia do Rosa-SC</strong>, I co-created an <strong>award-winning adult entertainment app</strong>, I took a <strong>motorcycle trip to Alaska and Ushuaia</strong>, I opened a <strong>guesthouse in Pipa RN</strong>, I became a surfer and I wasn't afraid to make another <strong>career transition</strong>.",
     introKnowMeBetter: "know me +",
     introAltText: "This is me in the local newspaper, after traveling more than 135 thousand km by motorcycle from Brazil to Alaska USA to Ushuaia Argentina",
     stacks: "Stacks/ Frameworks",
     titleProjets: "Projects",
-    moreProjects: "checkou more ->",
+    more: "checkout more ->",
     certificates: "Certificates",
   },
 
@@ -29,7 +29,7 @@ export const dict = {
     introAltText: "Este soy yo en el periódico local, después de recorrer más de 135 mil km en moto desde Brasil hasta Alaska USA hasta Ushuaia Argentina",
     stacks: "Tecnologias/ Lenguages",    
     titleProjets: "Proyetos",
-    moreProjects: "ver más ->",
+    more: "ver más ->",
     certificates: "Certificaciones",
   }
 }
