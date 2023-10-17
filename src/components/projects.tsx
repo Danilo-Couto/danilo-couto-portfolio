@@ -1,60 +1,49 @@
-import '../styles/projects.css'
-import { useEffect, useState } from "react";
-import useTranslation from "@/hooks/use-translation";
+import '../styles/projects.css';
+import React from 'react';
+import useTranslation from '@/hooks/use-translation';
+import { useDataContext } from '@/context/data_context';
+import Image from 'next/image';
 
 export function Projects() {
-  const [repos, setRepos] = useState([]);
+  const { t } = useTranslation();
+  const { repo } = useDataContext();
 
-  useEffect(() => {
-      const username = 'Danilo-Couto';
-      const apiUrl = `https://api.github.com/users/${username}/repos`;
-      const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+  const filteredRepo = repo.filter((r) => !r.fork);
+  const limitedData = filteredRepo.slice(0, 4);
 
-      if (!accessToken) {
-        throw new Error('GitHub access token not provided in environment variables.');
-      }
-      
-      fetch(apiUrl, {
-        headers: {
-          Authorization: `token ${accessToken}`,
-        },
-      })
-        .then((response) => response.json())
-        .then((starredRepos) => {
-          setRepos(starredRepos);
-        })
-        .catch((error) => {
-          console.error('API request failed:', error);
-        });
-      },[]);
-
-
-    const filteredRepoByStarred = repos.filter((r) => r.stargazers_count > 0 );
-
-    const gitRepo = filteredRepoByStarred.map((r) => (
-
-      <li key={r.id}>
-        <a href={r.html_url} target="_blank" rel="noopener noreferrer">
-          {r.name.toLowerCase()}
+  function ProjectItem({ repo }) {
+    return (
+      <li key={repo.id}>
+        <a href={repo.html_url} 
+          target="_blank" 
+          rel="noopener noreferrer">
+          <h4>{repo.name.toUpperCase().split('-').join(' ')}</h4>
         </a>
+        <Image
+        src="/images/backend_code.png"
+        alt="backend Image"
+        // layout="responsive"
+        width={200}
+        height={100}
+      />
       </li>
-    ))
-
-    const {t} = useTranslation();
-
+    );
+  }
+  
   return (
-    <div className='projects'>
+    <div className="projects">
       <div className="div_box_left" title="Projetos">
         <h2>{t('titleProjets')}</h2>
         <ul>
-          {!gitRepo ? <div>Github Repository</div> : gitRepo}
-          <>
-          <p></p>
-          <a href = "/projetos" >
-          {t('moreProjects')}
-          </a>
-          </>
+          {filteredRepo.length === 0 ? (
+            <div>No GitHub Repository</div>
+          ) : limitedData.map((r) => (
+            <ProjectItem key={r.id} repo={r} />))
+          }
         </ul>
+          <a href="/projetos">
+          <h4>{t('moreProjects')}</h4>
+          </a>
       </div>
     </div>
   );
