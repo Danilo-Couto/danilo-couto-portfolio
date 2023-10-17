@@ -4,7 +4,6 @@ import { createContext, useContext, useEffect, useState } from 'react';
 export const LanguageContext = createContext([]);
 
 export const defaultLocale = 'pt';
-// export const locales = ['pt', 'en', 'es'];
 
 export const LanguageProvider = ({ children }) => {
   const [locale, setLocale] = useState('pt');
