@@ -13,13 +13,12 @@
 }
 
 .buttons_intro{
+  align-self: flex-start;
   margin-top: 2rem;
 }
 
 .intro img {
   border-radius: 50%;
-  max-width: 100%; /* Set the maximum width of the image */
-  height: auto; /* Allow the height to adjust proportionally */
   transition: transform 0.2s ease; /* Add a smooth transition effect */
 }
 

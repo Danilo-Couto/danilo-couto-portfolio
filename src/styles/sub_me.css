@@ -1,0 +1,97 @@
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+.light .timeline-container::after {
+  background-color: var(--background-color-dark);
+  content: '';
+  position: absolute;
+  left: calc(50%);
+  width: 0.25rem;
+  height: 100%;
+}
+
+.dark .timeline-container::after {
+  background-color: var(--background-color-light);
+  content: '';
+  position: absolute;
+  left: calc(50%);
+  width: 0.25rem;
+  height: 100%;
+}
+
+.li-container {
+  margin: 1rem;
+}
+
+.li-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 46%;
+}
+
+.li-container:nth-child(odd) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  color: #426eff;
+}
+
+.li-container .circle {
+  background-color: var(--background-color-dark);
+  border: 0.25rem solid var(--background-color-dark);
+  border-radius: 50%;
+  position: absolute;
+  right: -3.97rem;
+  width: 1rem;
+  height: 1rem;
+  z-index: 100;
+}
+
+.dark .li-container .circle {
+  background-color: var(--background-color-light);
+  border: 0.25rem solid var(--background-color-light);
+}
+
+.li-container:nth-child(odd) .circle {
+  background-color: var(--background-color-dark);
+  border: 0.25rem solid var(--background-color-dark);
+  border-radius: 50%;
+  position: relative;
+  right: 4.7rem;
+}
+
+.dark .li-container:nth-child(odd) .circle {
+  background-color: var(--background-color-light);
+  border: 0.25rem solid var(--background-color-light);
+}
+
+
+@media (max-width: 768px) {
+  .timeline-container {
+    margin: 0; /* Remove margin on smaller screens */
+  }
+  
+  .timeline-container::after{
+    background-color: transparent; /* Remove background color on smaller screens */
+  }
+  
+  .li-content {
+    width: 100%; /* Make each item full-width on smaller screens */
+  }
+  
+  .li-container:nth-child(odd) {
+    justify-content: flex-start; /* Adjust alignment for odd items on smaller screens */
+  }
+}
