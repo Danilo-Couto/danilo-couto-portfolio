@@ -11,11 +11,13 @@ import {
   SiPython,
   SiMongodb,
   SiNextdotjs,
-  SiGithub,
   SiLinux,
   SiSequelize,
   SiPrisma,
-  SiRedux
+  SiGoogleappsscript,
+  SiSpringboot,
+  SiMongoose,
+  SiJunit5
 } from 'react-icons/si';
 import {
   DiNodejs,
@@ -34,28 +36,30 @@ function Stacks() {
     <div className='div_box_right' title="Skills/ Stacks/ Frameworks">
       <h2> {t('stacks')} </h2>
       <div className="icon-container">
-        <IoLogoJavascript />
-        <DiNodejs />
-        <FaReact />
-        <SiNextdotjs />
-        <AiFillHtml5 />
-        <FaCss3Alt />
-        <SiTypescript />
-        <SiPython />
-        <DiJava />
-        <SiMysql />
-        <SiMongodb />
-        <DiDocker />
-        <DiHeroku />
-        <SiStyledcomponents />
-        <SiJest />
-        <SiMocha />
-        <FaGithub />
-        <SiLinux /> 
-        <SiGithub /> 
-        <SiSequelize /> 
-        <SiPrisma /> 
-        <DiGoogleAnalytics />      
+        <IoLogoJavascript title = 'Javascript' />
+        <SiTypescript title = 'TypeScript' />
+        <DiNodejs title = 'NodeJs' />
+        <FaReact title = 'React' />
+        <SiNextdotjs title = 'NextJs' />
+        <AiFillHtml5 title = 'Html5' />
+        <FaCss3Alt title = 'CSS' />
+        <SiPython title = 'Python' />
+        <DiJava title = 'Java' />
+        <SiSpringboot title = 'Springboot'/>
+        <SiJunit5 title= 'Junit5' />
+        <SiMysql title = 'MySql' />
+        <SiSequelize title = 'Sequelize' /> 
+        <SiPrisma title = 'Primsa' /> 
+        <SiMongodb title = 'MongoDB' />
+        <SiMongoose title = 'Mongoose' />
+        <DiDocker title = 'Docker' />
+        <DiHeroku title = 'Heroku' />
+        <SiStyledcomponents title = 'Styled Components' />
+        <SiJest title = 'Jest' />
+        <SiMocha title = 'Mocha' />
+        <FaGithub title = 'GitHub' />
+        <SiLinux title = 'Linux' /> 
+        <DiGoogleAnalytics title = 'Google Analytics' />      
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ export function Projetos() {
           }
         </ul>
           <a href="/projetos">
-          <h4>{t('moreProjects')}</h4>
+          <h4>{t('more')}</h4>
           </a>
       </div>
     </div>

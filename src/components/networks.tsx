@@ -2,7 +2,7 @@ import Link from "next/link";
 import { handleRedirect } from "../utils";
 import useTranslation from "@/hooks/use-translation";
 
-export function MyNetworks() {
+export function Networks() {
 
   const { t } = useTranslation();
   
@@ -29,13 +29,7 @@ export function MyNetworks() {
 
       <button
         type="button"
-        onClick={() => handleRedirect('https://github.com/Danilo-Couto/')}
-      > CV
-      </button>   
-
-      <button
-        type="button"
-        onClick={() => handleRedirect('https://github.com/Danilo-Couto/')}
+        onClick={() => handleRedirect('https://wa.me/+5519997484772')}
       > whatsapp
       </button>
     </div>
