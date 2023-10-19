@@ -1,6 +1,4 @@
-module.exports = {
-    images: {
-        domains: ['api.accredible.com', 'hermes.digitalinnovation.one', 'www.dio.me', 'avatars.githubusercontent.com'],
-    },
+export const images = {
+    domains: ['api.accredible.com', 'hermes.digitalinnovation.one', 'www.dio.me', 'avatars.githubusercontent.com'],
 };  
   

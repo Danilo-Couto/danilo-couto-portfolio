@@ -2,6 +2,7 @@
   "name": "danilo-couto-portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,8 +21,11 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
     "eslint-config-next": "13.5.4",
+    "eslint-plugin-react": "^7.33.2",
     "nodemon": "^3.0.1",
     "typescript": "^5"
   }
