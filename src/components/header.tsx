@@ -1,5 +1,6 @@
+import React from 'react';
 import "../styles/header.css";
-import { AiFillBulb, AiFillStepBackward, AiOutlineBulb, AiTwotoneBulb } from "react-icons/ai";
+import { AiFillBulb, AiFillStepBackward, AiOutlineBulb } from "react-icons/ai";
 import { BR, ES, US } from "country-flag-icons/react/1x1";
 import { useLaguageContext } from "@/context/language-context";
 import { useThemeContext } from "@/context/theme_context";
@@ -8,12 +9,17 @@ import Link from "next/link";
 
 export function Header() {
 
+  const defaultThemeContextValue = {
+    theme: 'light',
+    toogleTheme: () => {}, 
+  };
+  
   const { changeLocale } = useLaguageContext();
-  const { theme, toogleTheme } = useThemeContext();
+  const { theme, toogleTheme } = useThemeContext() || defaultThemeContextValue;
 
   const router = useRouter();
 
-   const goBack = () => { 
+  const goBack = () => { 
     router.back();
   };
 

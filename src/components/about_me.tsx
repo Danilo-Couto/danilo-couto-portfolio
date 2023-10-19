@@ -1,3 +1,4 @@
+import React from 'react';
 import useTranslation from "@/hooks/use-translation";
 
 export function AboutMe() {

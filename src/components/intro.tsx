@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import '../styles/intro.css';
 import { Networks } from './networks';
 import { AboutMe } from './about_me';

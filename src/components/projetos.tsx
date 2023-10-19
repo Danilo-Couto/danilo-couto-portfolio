@@ -1,34 +1,39 @@
-import '../styles/projects.css';
 import React from 'react';
 import useTranslation from '@/hooks/use-translation';
 import { useDataContext } from '@/context/data_context';
 import Image from 'next/image';
+import '../styles/projects.css';
+
+interface Project {
+  id: number;
+  name: string;
+  html_url: string;
+  fork: boolean;
+}
 
 export function Projetos() {
   const { t } = useTranslation();
-  const { repo } = useDataContext();
+  const { repo } = useDataContext() as unknown as Project[];
 
   const filteredRepo = repo.filter((r) => !r.fork);
   const limitedData = filteredRepo.slice(0, 4);
 
-  function ProjectItem({ repo }) {
+  function ProjectItem({ repo }: { repo: Project }) {
     return (
       <li key={repo.id}>
-        <a href={repo.html_url} 
-          target="_blank" 
-          rel="noopener noreferrer">
+        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           <h4>{repo.name.toUpperCase().split('-').join(' ')}</h4>
         </a>
         <Image
-        src="/images/backend_code.png"
-        alt="backend Image"
-        width={200}
-        height={100}
-      />
+          src="/images/backend_code.png"
+          alt="backend Image"
+          width={200}
+          height={100}
+        />
       </li>
     );
   }
-  
+
   return (
     <div className="projects">
       <div className="div_box_left" title="Projetos">
@@ -37,12 +42,12 @@ export function Projetos() {
           {filteredRepo.length === 0 ? (
             <div>No GitHub Repository</div>
           ) : limitedData.map((r) => (
-            <ProjectItem key={r.id} repo={r} />))
-          }
+            <ProjectItem key={r.id} repo={r} />)
+          )}
         </ul>
-          <a href="/projetos">
+        <a href="/projetos">
           <h4>{t('more')}</h4>
-          </a>
+        </a>
       </div>
     </div>
   );

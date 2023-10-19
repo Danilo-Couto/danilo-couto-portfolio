@@ -5,7 +5,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { certificates } from '@/libs/certificados';
 
-function CertificateItem({certificate}) {
+interface Props {
+  certificate: {
+    link: string,
+    title: string,
+    altText: string,
+    stacks: string,
+  }
+}
+
+function CertificateItem({certificate}: Props) {
   return (
     <li>
       <Link href= {certificate.link}

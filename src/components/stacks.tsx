@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/stacks.css'
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaGithub, FaReact } from 'react-icons/fa';
@@ -14,7 +15,6 @@ import {
   SiLinux,
   SiSequelize,
   SiPrisma,
-  SiGoogleappsscript,
   SiSpringboot,
   SiMongoose,
   SiJunit5

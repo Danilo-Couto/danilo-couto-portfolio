@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SubProjects } from "@/components/sub_projects";

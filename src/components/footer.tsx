@@ -1,3 +1,4 @@
+import React from 'react';
 import { handleEmailClick, handleRedirect } from "@/utils";
 import { AiFillLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineMail, AiOutlineYoutube } from "react-icons/ai";
 import "../styles/footer.css"

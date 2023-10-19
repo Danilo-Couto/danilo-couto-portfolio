@@ -1,11 +1,15 @@
 'use client'
 
+import React, { ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 
-export const dataContext = createContext([]);
-export const useDataContext = () => useContext(dataContext);
+interface DataContextType {
+  repo: { id: string }[];
+}
 
-export const DataContext = ({ children }) => {
+export const dataContext = createContext<DataContextType| undefined>(undefined);
+
+export const DataContext = ({ children } : {children: ReactNode}) => {
   const [repo, setRepo] = useState([]);
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export const DataContext = ({ children }) => {
       throw new Error('GitHub access token not provided in environment variables.');
     }
 
-    const fetchRepos = async (url) => {
+    const fetchRepos = async (url: RequestInfo | URL) => {
       try {
         const response = await fetch(url, {
           headers: {
@@ -28,19 +32,21 @@ export const DataContext = ({ children }) => {
         const linkHeader = response.headers.get('Link');
         
         if (linkHeader) {
-          // Parse the Link header to check for pagination links
           const linksArray = linkHeader.split(', ');
           const nextPageUrl = linksArray.find(link => link.includes('rel="next"'));
           
           if (nextPageUrl) {
-            const nextUrl = nextPageUrl.match(/<([^>]*)>/)[1];
-            // Fetch the next page recursively
-            fetchRepos(nextUrl);
+            const nextUrl = nextPageUrl.match(/<([^>]*)>/);
+            if (nextUrl) {
+              const nextPage = nextUrl[1];
+              fetchRepos(nextPage);
+            }
           }
+          
         }
 
         setRepo(prevRepo => {
-          const uniqueData = data.filter(newData => prevRepo.every(prevData => newData.id !== prevData.id));
+          const uniqueData = data.filter((newData: { id: string; }) => prevRepo.every(prevData => newData.id !== prevData.id));
           return [...prevRepo, ...uniqueData];
         });
       } catch (error) {
@@ -58,3 +64,5 @@ export const DataContext = ({ children }) => {
     </dataContext.Provider>
   );
 };
+
+export const useDataContext = () => useContext(dataContext);

@@ -1,10 +1,20 @@
-import '../styles/sub_projects.css';
 import React from 'react';
 import { useDataContext } from '@/context/data_context';
 import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';
+import '../styles/sub_projects.css';
 
-function ProjectItem({ repo }) {
+interface Props {
+  repo: {
+    id: string,
+    html_url: string,
+    name: string,
+    language :string,
+    description :string,
+  }
+}
+
+function ProjectItem({ repo} : Props) {
   return (
     <li key={repo.id}>
       <a href={repo.html_url} 

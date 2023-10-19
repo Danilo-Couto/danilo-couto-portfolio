@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from "next/link";
 import { handleRedirect } from "../utils";
 import useTranslation from "@/hooks/use-translation";

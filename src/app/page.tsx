@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Intro } from "@/components/intro";
 import Stacks from "@/components/stacks";
 import { Footer } from '@/components/footer';
