@@ -6,8 +6,8 @@ export function AboutMe() {
   
   return (
     <div >
-        <h2> {t('introTitle')} </h2>
-        <p dangerouslySetInnerHTML={{ __html: t('introDescription') }} />
+      <h2> {t('introTitle')} </h2>
+      <p dangerouslySetInnerHTML={{ __html: t('introDescription') }} />
     </div>
   );
 }

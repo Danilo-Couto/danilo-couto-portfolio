@@ -3,7 +3,6 @@ import useTranslation from '@/hooks/use-translation';
 import { certificates } from '@/libs/certificados';
 import Image from 'next/image';
 import Link from 'next/link';
-import '../styles/certificates.css';
 
 interface Certificate {
   link: string;
@@ -25,8 +24,8 @@ function CertificateItem({ certificate }: Props) {
         src={certificate.link}
         alt={certificate.altText}
         layout="responsive"
-        width={400}
-        height={300}
+        width={300}
+        height={200}
       />
     </li>
   );
@@ -37,7 +36,7 @@ export function Certificados() {
 
   return (
     <div className="certificates">
-      <div className="div_box_right" title="">
+      <div className="div_box" title="">
         <h2>{t('certificates')}</h2>
         <ul>
           {certificates.slice(-3).map((c) => (

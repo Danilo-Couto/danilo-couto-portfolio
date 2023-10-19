@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { LanguageProvider } from '../context/language-context'
 import { ThemeContext } from '@/context/theme_context'
 import { DataContext } from '@/context/data_context'
+import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] })
 

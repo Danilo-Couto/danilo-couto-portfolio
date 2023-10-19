@@ -13,7 +13,7 @@ export function Intro() {
 
   return (
     <div className='intro'>  
-      <div className='div_box_left'>
+      <div className='div_box'>
         <AboutMe />
         <Networks />
       </div>

@@ -1,4 +1,3 @@
-import '../styles/sub_certificados.css';
 import React from 'react';
 import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';

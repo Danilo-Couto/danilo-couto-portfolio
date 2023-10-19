@@ -44,10 +44,6 @@
   justify-content: flex-end;
 }
 
-a {
-  color: #426eff;
-}
-
 .li-container .circle {
   background-color: var(--background-color-dark);
   border: 0.25rem solid var(--background-color-dark);
@@ -80,18 +76,18 @@ a {
 
 @media (max-width: 768px) {
   .timeline-container {
-    margin: 0; /* Remove margin on smaller screens */
+    margin: 0;
   }
   
   .timeline-container::after{
-    background-color: transparent; /* Remove background color on smaller screens */
+    background-color: transparent;
   }
   
   .li-content {
-    width: 100%; /* Make each item full-width on smaller screens */
+    width: 100%; 
   }
   
   .li-container:nth-child(odd) {
-    justify-content: flex-start; /* Adjust alignment for odd items on smaller screens */
+    justify-content: flex-start;
   }
 }

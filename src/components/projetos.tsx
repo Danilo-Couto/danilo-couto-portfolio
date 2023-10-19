@@ -2,7 +2,6 @@ import React from 'react';
 import useTranslation from '@/hooks/use-translation';
 import { useDataContext } from '@/context/data_context';
 import Image from 'next/image';
-import '../styles/projects.css';
 
 interface Project {
   id: number;
@@ -27,8 +26,8 @@ export function Projetos() {
         <Image
           src="/images/backend_code.png"
           alt="backend Image"
-          width={200}
-          height={100}
+          width={250}
+          height={150}
         />
       </li>
     );
@@ -36,7 +35,7 @@ export function Projetos() {
 
   return (
     <div className="projects">
-      <div className="div_box_left" title="Projetos">
+      <div className="div_box" title="Projetos">
         <h2>{t('titleProjets')}</h2>
         <ul>
           {filteredRepo.length === 0 ? (

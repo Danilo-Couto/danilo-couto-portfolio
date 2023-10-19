@@ -54,6 +54,10 @@ a {
   color: #fff;
 }
 
+a:active{
+  outline: none;
+}
+
 /* Rethink how focus works */
 :focus:not(:focus-visible) {
   outline: none;
@@ -74,7 +78,7 @@ summary,
 button {
   margin: 0.5rem;
   display: inline-block;
-  width: 6rem;
+  width: 10rem;
   outline: 0;
   border-radius: 6px;
   color: #fff;
@@ -110,6 +114,19 @@ h2 {
   font-size: 24px;
 }
 
+.div_box {
+  max-width: 96%;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid  rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 2rem;
+}
 
 /* Create a responsive layout */
 @media screen and (max-width: 768px) {
@@ -148,20 +165,26 @@ h2 {
   }
 }
 
-.div_box_left {
-  max-width: 96%;
-  box-shadow: -8px -4px;
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+a {
+  color: #426eff;
 }
 
-.div_box_right {
-  box-shadow: 8px -4px;
+ul {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  /* width: 25%; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;   
   align-items: center;
-  justify-content: space-between;
-  margin: 2rem;
+  text-align: center;
+  text-overflow: ellipsis; 
 }

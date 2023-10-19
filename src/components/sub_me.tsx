@@ -1,4 +1,3 @@
-import '../styles/sub_me.css';
 import React from 'react';
 import Link from 'next/link';
 import userData from '@/libs/my_history';
@@ -16,7 +15,7 @@ interface Props {
 function MyHistoryItem({mySelf}: Props) {
     
   return (
-    <li className='li-container'>
+    <div className='li-container'>
       <div className='li-content'>
         <span className="circle" />
         <p>{mySelf.year}</p>
@@ -32,18 +31,16 @@ function MyHistoryItem({mySelf}: Props) {
         : null
         }
       </div>
-    </li>
+    </div>
   );
 }
 
 export function SubMe() {
   return (
-    <div>
-      <ul className="timeline-container">
+    <div className="timeline-container">
       {userData.experience.map((data) => (
         <MyHistoryItem key={data.title} mySelf={data} />
       ))}
-      </ul>
     </div>
   );
 }
