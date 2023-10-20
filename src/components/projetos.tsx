@@ -2,22 +2,16 @@ import React from 'react';
 import useTranslation from '@/hooks/use-translation';
 import { useDataContext } from '@/context/data_context';
 import Image from 'next/image';
-
-interface Project {
-  id: number;
-  name: string;
-  html_url: string;
-  fork: boolean;
-}
+import { Repository, RepositoryArray } from '@/app/interfaces/Interfaces';
 
 export function Projetos() {
   const { t } = useTranslation();
-  const { repo } = useDataContext() as unknown as Project[];
+  const { repo } = useDataContext() as RepositoryArray; 
 
-  const filteredRepo = repo.filter((r) => !r.fork);
+  const filteredRepo = repo.filter((r: { fork: boolean; }) => !r.fork);
   const limitedData = filteredRepo.slice(0, 4);
 
-  function ProjectItem({ repo }: { repo: Project }) {
+  function ProjectItem({ repo }: {repo: Repository}) {
     return (
       <li key={repo.id}>
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
@@ -41,7 +35,7 @@ export function Projetos() {
         <ul>
           {filteredRepo.length === 0 ? (
             <div>No GitHub Repository</div>
-          ) : limitedData.map((r) => (
+          ) : limitedData.map((r: Repository) => (
             <ProjectItem key={r.id} repo={r} />)
           )}
         </ul>

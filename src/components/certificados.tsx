@@ -3,18 +3,9 @@ import useTranslation from '@/hooks/use-translation';
 import { certificates } from '@/libs/certificados';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Certificate } from '@/app/interfaces/Interfaces';
 
-interface Certificate {
-  link: string;
-  title: string;
-  altText: string;
-}
-
-interface Props {
-  certificate: Certificate;
-}
-
-function CertificateItem({ certificate }: Props) {
+function CertificateItem({ certificate }: Certificate) {
   return (
     <li>
       <Link href={certificate.link} target="_blank" rel="noopener noreferrer">

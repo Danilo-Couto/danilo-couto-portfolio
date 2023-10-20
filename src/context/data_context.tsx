@@ -1,16 +1,12 @@
 'use client'
 
-import React, { ReactNode } from 'react';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { Repository, RepositoryArray } from '@/app/interfaces/Interfaces';
+import React, { ReactNode, useEffect, useState, createContext, useContext } from 'react';
 
-interface DataContextType {
-  repo: { id: string }[];
-}
+export const dataContext = createContext<RepositoryArray| undefined>(undefined);
 
-export const dataContext = createContext<DataContextType| undefined>(undefined);
-
-export const DataContext = ({ children } : {children: ReactNode}) => {
-  const [repo, setRepo] = useState([]);
+export const DataContextProvider = ({ children } : {children: ReactNode}) => {
+  const [repo, setRepo] = useState<Repository[]>([]);
 
   useEffect(() => {
     const username = 'Danilo-Couto';

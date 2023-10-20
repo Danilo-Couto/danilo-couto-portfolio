@@ -1,11 +1,11 @@
 import React from 'react';
 import { AiFillBulb, AiFillStepBackward, AiOutlineBulb } from "react-icons/ai";
 import { BR, ES, US } from "country-flag-icons/react/1x1";
-import { useLaguageContext } from "@/context/language-context";
 import { useThemeContext } from "@/context/theme_context";
+import { useLaguageContext } from '@/context/language_context';
 import { useRouter } from "next/navigation";
-import "../styles/header.css";
 import Link from "next/link";
+import "../styles/header.css";
 
 export function Header() {
 

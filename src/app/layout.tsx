@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { LanguageProvider } from '../context/language-context'
+import { LanguageProvider } from '../context/language_context'
 import { ThemeContext } from '@/context/theme_context'
-import { DataContext } from '@/context/data_context'
 import '../styles/globals.css';
+import { DataContextProvider } from '@/context/data_context';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,9 +22,9 @@ export default function RootLayout({ children }: {
       <body className={inter.className} >
          <LanguageProvider>
           <ThemeContext >
-            <DataContext >
+            <DataContextProvider >
              {children}
-            </DataContext>
+            </DataContextProvider>
           </ThemeContext>
         </LanguageProvider>
       </body>
