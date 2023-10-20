@@ -2,7 +2,6 @@ import React from 'react';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaGithub, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
-import '../styles/stacks.css'
 import {
   SiJest,
   SiMocha,

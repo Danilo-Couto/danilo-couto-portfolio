@@ -39,7 +39,7 @@ export function Certificados() {
       <div className="div_box" title="">
         <h2>{t('certificates')}</h2>
         <ul>
-          {certificates.slice(-3).map((c) => (
+          {certificates.slice(-4).map((c) => (
             <CertificateItem key={c.title} certificate={c} />
           ))}
         </ul>

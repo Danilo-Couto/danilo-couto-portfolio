@@ -1,30 +1,73 @@
-.intro{
+.intro {
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  flex-direction: column;
+  align-items: left;
+  padding: 2rem;
+  margin-left: 2rem;
 }
 
-.intro .div_box {
-  flex: 1; /* Takes 2/3 of the width */
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
+.intro-box {
+  display: flex;
+  align-items: center;
+}
+
+.intro p {
+  flex: 3;
+}
+
+.intro-img {
+  flex: 1;
 }
 
 .intro h2 {
-  margin-bottom: 2rem;
+  text-align: left;
 }
 
-.buttons_intro{
+.buttons-intro {
   align-self: flex-start;
-  margin-top: 2rem;
 }
 
 .intro img {
   border-radius: 50%;
-  transition: transform 0.2s ease; /* Add a smooth transition effect */
+  transition: transform 0.2s ease;
 }
 
 .intro img:hover {
-  transform: scale(1.1); /* Enlarge the image by 20% on hover */
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .intro-img {
+    margin: 1rem;
+    order: -1;
+   }
+
+   .intro-img img:hover {
+    transform: none;
+  }  
+
+  .intro-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  }
+
+  .buttons-intro {
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+  }
+  
+  .buttons-intro button {
+    margin: 0.5rem;
+    width: 40%;
+  }
+
 }

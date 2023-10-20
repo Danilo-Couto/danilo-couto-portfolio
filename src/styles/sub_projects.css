@@ -25,3 +25,11 @@ li {
 li a {
     color: #426eff;
 }
+
+
+@media (max-width: 768px) {
+    .sub-projects li {
+        width: 90%;
+    }    
+}
+  

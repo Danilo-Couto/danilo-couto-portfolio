@@ -1,11 +1,10 @@
 'use client'
 
 import React from 'react';
-import '../styles/intro.css';
 import { Networks } from './networks';
-import { AboutMe } from './about_me';
 import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';
+import '../styles/intro.css';
 
 export function Intro() {
 
@@ -13,19 +12,20 @@ export function Intro() {
 
   return (
     <div className='intro'>  
-      <div className='div_box'>
-        <AboutMe />
-        <Networks />
+      <h2> {t('introTitle')} </h2>
+      <div className='intro-box'>
+        <p dangerouslySetInnerHTML={{ __html: t('introDescription') }} />    
+        <div className='intro-img'>
+          <Image
+            src="https://avatars.githubusercontent.com/u/88905222?s=400&u=2519bc0d939d3b8f1af413bc8801adf6941e172b&v=4"
+            alt="Eu em viagem ao Alasca de moto"
+            layout="responsive"
+            width={300}
+            height={200}
+            />
+        </div>
       </div>
-      <div title={t('introAltText')}>
-      <Image
-        src="https://avatars.githubusercontent.com/u/88905222?s=400&u=2519bc0d939d3b8f1af413bc8801adf6941e172b&v=4"
-        alt="Eu em viagem ao Alasca de moto"
-        layout="responsive"
-        width={500}
-        height={400}
-      />
-      </div>
+      <Networks />
     </div>
   );
 }

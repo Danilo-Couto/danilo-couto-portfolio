@@ -26,8 +26,9 @@ export function Projetos() {
         <Image
           src="/images/backend_code.png"
           alt="backend Image"
-          width={250}
-          height={150}
+          layout="responsive"
+          width={300}
+          height={200}
         />
       </li>
     );
