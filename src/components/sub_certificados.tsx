@@ -3,17 +3,10 @@ import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { certificates } from '@/libs/certificados';
+import { Certificate } from '@/app/interfaces/Interfaces';
 
-interface Props {
-  certificate: {
-    link: string,
-    title: string,
-    altText: string,
-    stacks: string,
-  }
-}
 
-function CertificateItem({certificate}: Props) {
+function CertificateItem({certificate}: Certificate) {
   return (
     <li>
       <Link href= {certificate.link}

@@ -1,18 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import userData from '@/libs/my_history';
+import { MyHistory } from '@/app/interfaces/Interfaces';
 
-interface Props {
-  mySelf: {
-    company?: string,
-    desc: string,
-    link?: string, 
-    title: string,
-    year: string
-  }
-}
-
-function MyHistoryItem({mySelf}: Props) {
+function MyHistoryItem({mySelf}: MyHistory) {
     
   return (
     <div className='li-container'>

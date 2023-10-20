@@ -3,18 +3,10 @@ import { useDataContext } from '@/context/data_context';
 import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';
 import '../styles/sub_projects.css';
+import { Repository, RepositoryArray } from '@/app/interfaces/Interfaces';
 
-interface Props {
-  repo: {
-    id: string,
-    html_url: string,
-    name: string,
-    language :string,
-    description :string,
-  }
-}
 
-function ProjectItem({ repo} : Props) {
+function ProjectItem({ repo }: {repo: Repository}) {
   return (
     <li key={repo.id}>
       <a href={repo.html_url} 
@@ -37,7 +29,7 @@ function ProjectItem({ repo} : Props) {
 
 export function SubProjects() {
   const { t } = useTranslation();
-  const { repo } = useDataContext();
+  const { repo } = useDataContext() as RepositoryArray; 
 
   const filteredRepo = repo.filter((r) => !r.fork);
 
