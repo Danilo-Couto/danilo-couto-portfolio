@@ -9,7 +9,7 @@ import '../styles/globals.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Danilo Couto Portfolio',
+  title: 'Portfolio de Danilo Couto, Desenvolvedor de Software',
   description: 'Criado em NextJS e TypeScript',
 }
 
