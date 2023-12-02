@@ -1,7 +1,6 @@
 import React from 'react';
 import useTranslation from '@/hooks/use-translation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { certificates } from '@/libs/certificados';
 import { Certificate } from '@/app/interfaces/Interfaces';
 
@@ -9,11 +8,7 @@ import { Certificate } from '@/app/interfaces/Interfaces';
 function CertificateItem({certificate}: Certificate) {
   return (
     <li>
-      <Link href= {certificate.link}
-        target="_blank" 
-        rel="noopener noreferrer">
-        <h4>{certificate.title}</h4>
-      </Link>
+      <h4>{certificate.title}</h4>
       <Image
         src={certificate.link}
         alt={certificate.altText}

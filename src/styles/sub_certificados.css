@@ -22,7 +22,7 @@ li {
     text-align: center;
 }
 
-li a {
+li a, h4 {
     color: #426eff;
 }
 

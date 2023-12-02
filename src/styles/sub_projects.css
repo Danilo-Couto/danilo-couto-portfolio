@@ -26,6 +26,17 @@ li a {
     color: #426eff;
 }
 
+.topics {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+Image {
+    height: 50%;
+    background-color: #426eff;
+
+}
 
 @media (max-width: 768px) {
     .sub-projects li {
