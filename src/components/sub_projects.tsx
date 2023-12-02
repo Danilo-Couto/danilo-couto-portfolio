@@ -14,14 +14,20 @@ function ProjectItem({ repo }: {repo: Repository}) {
         rel="noopener noreferrer">
         <h4>{repo.name.toUpperCase().split('-').join(' ')}</h4>
       </a>
-      <h5>{repo.language}</h5>
+      <div className="topics" >
+      {repo.topics.slice(0,5).map((t) => (
+          <h5 key={t}>{t.toUpperCase()}</h5>
+        ))}
+      </div>
+
       <Image
-        src="/images/backend_code.png"
+        src="/images/github-mark/github-mark.png"
         alt="backend Image"
         layout="responsive"
-        width={500}
-        height={300}
+        width={200}
+        height={150}
       />
+
       <p>{repo.description}</p>
     </li>
   );
@@ -31,20 +37,20 @@ export function SubProjects() {
   const { t } = useTranslation();
   const { repo } = useDataContext() as RepositoryArray; 
 
-  const filteredRepo = repo.filter((r) => !r.fork);
-
   return (
     <div className='sub-projects'>
       <h3>{`${repo.length} ${t('titleProjets')}`}</h3>
-      {filteredRepo.length === 0 ? (
+
+      {repo.length === 0 ? (
         <div>GitHub Repository</div>
       ) : (
         <ul>
-          {filteredRepo.map((r) => (
+          {repo.map((r) => (
             <ProjectItem key={r.id} repo={r} />
           ))}
         </ul>
       )}
+
     </div>
   );
 }

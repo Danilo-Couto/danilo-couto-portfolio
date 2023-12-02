@@ -25,6 +25,8 @@ export const DataContextProvider = ({ children } : {children: ReactNode}) => {
           },
         });
         const data = await response.json();
+        const filteredRepo = data.filter((r: { fork: boolean; stargazers_count : number}) => !r.fork && r.stargazers_count > 0 );
+
         const linkHeader = response.headers.get('Link');
         
         if (linkHeader) {
@@ -38,11 +40,10 @@ export const DataContextProvider = ({ children } : {children: ReactNode}) => {
               fetchRepos(nextPage);
             }
           }
-          
         }
 
         setRepo(prevRepo => {
-          const uniqueData = data.filter((newData: { id: string; }) => prevRepo.every(prevData => newData.id !== prevData.id));
+          const uniqueData = filteredRepo.filter((newData: { id: string; }) => prevRepo.every(prevData => newData.id !== prevData.id));
           return [...prevRepo, ...uniqueData];
         });
       } catch (error) {
