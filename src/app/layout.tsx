@@ -9,8 +9,8 @@ import { DataContextProvider } from '@/context/data_context';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Portfolio de Danilo Couto, Desenvolvedor de Software',
-  description: 'Criado em NextJS e TypeScript',
+  title: 'Portfólio de Danilo Couto, Desenvolvedor de Software',
+  description: 'Web Page Criado em NextJS e TypeScript',
 }
 
 export default function RootLayout({ children }: {

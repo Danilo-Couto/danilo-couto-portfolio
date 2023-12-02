@@ -9,11 +9,13 @@ export function Networks() {
   
   return (
     <div className="buttons-intro">
+      
       <button
         type="button"
-      >
+      > saiba +
         <Link href={'/eu'}>{t('introKnowMeBetter')}</Link>
       </button>
+
       <button
         type="button"
         onClick={() =>

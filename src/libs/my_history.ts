@@ -1,13 +1,11 @@
 const userData = {
     about: {
       title:
-        'Sou um estudante de desenvolvimento de software em busca de impacto social, cultural e de um mundo melhor.',
+        'Sou um estudante de desenvolvimento de software aventureiro com apetite a riscos.',
       description: [
-        `Estudo na Trybe desde 2021 e desde então venho codando em HTML, CSS, JavaScript, React, Jest, Mocha Chai, Node.js, Express, MySQL, StyledComponents, TypeScript, JWT, Sequelize, Docker, Heroku, NextJs e buscando mais. `,
+        `Comecei estudando programação na Trybe em 2021 e desde então venho me atualizando em HTML, CSS, JavaScript, React, Node.js, TypeScript, MySQL, Mongo, ORM's, Docker, NextJs, Python e buscando mais. `,
         `Clique para me conhecer melhor!`
       ],
-      currentProject: '',
-      currentProjectUrl: ''
     },
     experience: [
       {
@@ -15,13 +13,13 @@ const userData = {
         company: 'Sua empresa aqui',
         year: 'este ano',
         link: '',
-        desc: 'Busco minha primeira oportunidade na área, mas tenho 10 anos de histórico profissional em publicidade e outros 6 anos de empreendedorismo. Já desenvolvi para meus própios negócios'
+        desc: 'Busco minha primeira oportunidade na área, mas tenho 16 anos de histórico profissional em publicidade e empreendedorismo.'
       },
       {
         title: 'Pousada Toa Toa em Pipa',
         year: '2022 - atualmente',
         link: 'https://www.pousadaempipa.com.br/',
-        desc: 'Proprietário da pousada na Praia da Pipa, RN, Brasil.'
+        desc: 'Gerente da pousada na Praia da Pipa, RN, Brasil.'
       },
       {
         title: 'Software Developer Student',
@@ -34,14 +32,14 @@ const userData = {
         title: 'Transição de carreira',
         year: '2021',
         link: '',
-        desc: 'Após viajar o mundo, vi em TI uma nova oportunidade para mudar vidas e comunidades através de soluções que tragam estabilidade econômica e social e maior liberdade individual.'
+        desc: 'Após viajar o mundo, vi em TI uma nova oportunidade para mudar vidas através de soluções que tragam estabilidade econômica e social e maior liberdade individual.'
       },
       {
         title: 'Viagem de Moto pelo Mundo',
         company: 'Moto Mochila Brasil',
         year: '2017',
         link: 'https://www.youtube.com/c/MotoeMochilaBrasil',
-        desc: '16 países, 116 mil kms praticando Soft-Skills: novos paradigmas, idiomas, culturas e muitos amigos'
+        desc: '16 países, 130 mil kms praticando Soft-Skills'
       },
       {
         title: 'Proprietário de Pousada',

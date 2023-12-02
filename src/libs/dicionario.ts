@@ -3,7 +3,7 @@ export const dict = [
   { pt : 
     {
       introTitle: "Desenvolvedor Web Júnior",
-      introDescription: "Tenho muito orgulho da minha história. Antes de ser um <strong>Desenvolvedor Web formado pela Trybe</strong> com mais de 60 projetos concluídos, fiz algumas coisas. Fui <strong>baterista de hardcore</strong>/punk/metal, me formei em publicidade pela <strong>Cásper Líbero</strong>, carreira que segui até me tornar <strong>coordenador de área</strong> da uma grande agência, andei <strong>pela África do Sul</strong>, tive um <strong>hostel na Praia do Rosa-SC</strong>, co-criei um <strong>aplicativo premiado de entretenimento adulto</strong>, fiz uma <strong>viagem de moto até Alasca e Ushuaia</strong>, abri uma <strong>pousada em Pipa RN</strong>, virei surfista e não tive medo de fazer outra <strong>transição de carreira</strong>.",
+      introDescription: "Tenho muito orgulho da minha história. Antes de me formar em <strong>Desenvolvimento Web pela Trybe</strong> [com mais de 60 projetos concluídos], fiz algumas coisas. Fui <strong>baterista de hardcore</strong>/punk/metal, me formei em publicidade pela <strong>Cásper Líbero</strong> [carreira que segui até me tornar <strong>coordenador de área</strong> da uma grande agência], andei <strong>pela África do Sul</strong>, tive um <strong>hostel na Praia do Rosa-SC</strong>, co-criei um <strong>aplicativo premiado de entretenimento adulto</strong>, fiz uma <strong>viagem de moto até Alasca e Ushuaia</strong> e abri uma <strong>pousada em Pipa RN</strong>.",
       introKnowMeBetter: "saiba +",
       introAltText: "Este sou eu no jornal local, após viajar mais de 135 mil kms de moto do Brasil ao Alasca EUA ao Ushuaia Argentina",
       stacks: "Tecnologias/ Linguagens",
