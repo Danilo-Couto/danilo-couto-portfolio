@@ -12,7 +12,7 @@ export function Intro() {
 
   return (
     <div className='intro'>  
-      <h2> {t('introTitle')} </h2>
+      <h2> {t('introTitle')}: Java, TypeScript, JavaScript, Python</h2>
       <div className='intro-box'>
         <p dangerouslySetInnerHTML={{ __html: t('introDescription') }} />    
         <div className='intro-img'>

@@ -6,8 +6,8 @@ Welcome to my portfolio! Here, I showcase my skills, projects, and the technolog
 
 I'm Danilo from Brazil, a passionate Junior Software Developer with 2 years of experience in web development and a background in entrepreneurship. I'm dedicated to creating high-quality web applications, pursuing proficiency in the following areas:
 
-- Front-end Development
 - Back-end Development
+- Front-end Development
 - Database Management
 - UI/UX Design
 
@@ -24,6 +24,7 @@ In this portfolio, I have worked with:
 - **Back-end Development**:
   - Node.js
   - RESTful APIs
+  
 
 - **Version Control**:
   - Git, GitHub

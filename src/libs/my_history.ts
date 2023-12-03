@@ -3,7 +3,7 @@ const userData = {
       title:
         'Sou um estudante de desenvolvimento de software aventureiro com apetite a riscos.',
       description: [
-        `Comecei estudando programação na Trybe em 2021 e desde então venho me atualizando em HTML, CSS, JavaScript, React, Node.js, TypeScript, MySQL, Mongo, ORM's, Docker, NextJs, Python e buscando mais. `,
+        `Comecei estudando programação na Trybe em 2021 e desde então venho me atualizando em HTML, CSS, JavaScript, TypeScript,  NextJs, Python, Java, React, NextJs, NodeJs, MySQL, Postgres, Mongo, ORM's, Docker, e buscando mais. `,
         `Clique para me conhecer melhor!`
       ],
     },
